@@ -1,0 +1,215 @@
+/* Configuração Global e Resets */
+*{
+     margin: 0;
+     padding: 0;
+    box-sizing: border-box;
+    }
+    
+    /* Configuração Básica (Alto Contraste Estilo Nike) */
+    body {
+     font-family: 'Poppins', Arial, sans-serif;
+     background-color: #FFFFFF; /* Fundo Branco Limpo */
+     color: #000000; /* Texto Principal Preto */
+     text-align: center; 
+     padding: 50px;
+    }
+    
+    /* ------------------------------------------- */
+    /* ESTILOS DO HEADER (Ajuste Principal) */
+    /* ------------------------------------------- */
+    
+    header{
+    background-color: #FFFFFF; /* Fundo branco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
+        /* SOLUÇÃO: Afasta todos os elementos, incluindo a barra de busca, das laterais em 20px. */
+        padding: 10px 20px; 
+        border-bottom: 1px solid #EEEEEE; 
+    }
+    
+    .logo{
+     display: flex;
+     width: 150px;
+     /* padding: 20px; Removido pois já temos padding no header */
+        align-items: center;
+    }
+    
+    nav a{
+     color: #000000; /* Corrigido para preto */
+        text-decoration: none;
+        font-weight: 500;
+        margin: 0 15px; /* Espaçamento entre os links */
+    }
+    
+    /* Estilo da Barra de Busca dentro de .controles */
+    .controles input[type="text"] {
+        padding: 8px 15px; 
+        border: 1px solid #CCCCCC;
+        border-radius: 4px; 
+        font-size: 0.9em;
+        width: 180px;
+        transition: border-color 0.3s;
+    }
+    
+    .controles input[type="text"]:focus {
+        border-color: #000000; 
+        outline: none;
+    }
+    
+    /* ------------------------------------------- */
+    /* OUTROS ESTILOS (Mantidos) */
+    /* ------------------------------------------- */
+    
+    /* Título Principal (Estilo Forte e Minimalista) */
+    h1 {
+     font-size: 4em; 
+     font-weight: 700; 
+     text-transform: uppercase; 
+     letter-spacing: 5px; 
+     margin-bottom: 40px;
+    }
+    
+    /* Texto de Parágrafo */
+    .content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    }
+    
+    /* Cor de Destaque */
+    .highlight-text {
+     color: #EA553B; 
+     font-weight: 700;
+     margin-top: 30px;
+     text-transform: uppercase;
+    }
+    
+    /* Botão de Chamada para Ação */
+    .cta-button {
+    background-color: #000000; 
+     color: #FFFFFF; 
+     border: none;
+     padding: 15px 40px;
+     font-size: 1.1em;
+     font-weight: 700;
+     text-transform: uppercase; 
+     cursor: pointer;
+     transition: background-color 0.3s; 
+    }
+    
+    .cta-button:hover {
+     background-color: #333333; 
+    }
+    
+    /* Span (Removido o bloco repetido, deixando o original) */
+    span {
+     color: #0000ff; /* Azul puro */
+    }
+/*
+ * ----------------------------------------------------
+ * Estilos Globais e Variáveis (Mantidos)
+ * ----------------------------------------------------
+ */
+ :root {
+    --cor-fundo: #FFFFFF; /* Mudando para branco para um visual mais limpo na seção */
+    --cor-texto: #000000; /* Texto preto */
+    --cor-destaque: #E53E3E;
+    --cor-botao-fundo: #000000;
+    --cor-botao-texto: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* Se você tem um header, é bom definir o fundo do body para não conflitar */
+    background-color: #ffffff; /* Um cinza bem claro, comum em sites de e-commerce */
+}
+
+/*
+ * ----------------------------------------------------
+ * Estilos da Seção de Lançamento
+ * ----------------------------------------------------
+ */
+.lancamento {
+    width: 100%;
+    /* Max-width para centrar a seção em telas muito grandes, como o site da Nike faz */
+    max-width: 1400px;
+    margin: 40px auto; /* Adiciona margem em cima/baixo e centraliza horizontalmente */
+    text-align: center;
+    background-color: var(--cor-fundo); /* Fundo branco para a seção */
+    padding: 0; /* Remove padding desnecessário */
+}
+
+/*
+ * ----------------------------------------------------
+ * Estilos da Imagem (Em Bloco)
+ * ----------------------------------------------------
+ */
+.lancamento img {
+    /* A imagem agora é um elemento em bloco que ocupa a largura total */
+    display: block;
+    width: 100%;
+    /* Garante que a imagem não distorça se as dimensões forem alteradas */
+    height: auto;
+    object-fit: cover;
+}
+
+/*
+ * ----------------------------------------------------
+ * Estilos do Conteúdo (Texto e Botão)
+ * ----------------------------------------------------
+ */
+.lancamento-conteudo {
+    /* Adiciona padding interno para separar o texto da imagem e das bordas */
+    padding: 40px 20px;
+    color: var(--cor-texto); /* Texto escuro contra o fundo claro */
+}
+
+.lancamento h2 {
+    /* Títulos grandes e ousados */
+    font-size: clamp(2rem, 5vw, 4rem); /* Tamanho responsivo usando clamp */
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+}
+
+.lancamento p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    margin-bottom: 2em;
+    color: #666; /* Cor cinza sutil para a descrição */
+}
+
+.lancamento button {
+    /* Estilo de botão limpo e forte */
+    background-color: var(--cor-botao-fundo);
+    color: var(--cor-botao-texto);
+    border: none; /* Remove a borda para um look mais limpo */
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px; /* Adiciona bordas levemente arredondadas */
+}
+
+.lancamento button:hover {
+    /* Efeito hover: um preto ligeiramente mais claro ou o destaque */
+    background-color: #333333;
+}
+
+/*
+ * ----------------------------------------------------
+ * Garante que o Header não seja afetado
+ * ----------------------------------------------------
+ */
+/* Qualquer estilo aplicado especificamente a .lancamento não afetará o header */
